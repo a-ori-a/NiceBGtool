@@ -13,10 +13,10 @@ apply();
 function apply() {
     var editor = document.getElementById("editor");
     var ctx = editor.getContext("2d");
-    ctx.clearRect(0,0,1920,1080);
+    ctx.clearRect(0,0, editor.width, editor.height);
     var color = document.getElementById('color').value;
     ctx.fillStyle = color;
-    ctx.fillRect(0,0,1920,1080);
+    ctx.fillRect(0,0, editor.width, editor.height);
 }
 
 function generate() {
