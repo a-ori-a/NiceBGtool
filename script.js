@@ -21,9 +21,25 @@ function apply() {
 
 function generate() {
     var editor = document.getElementById("editor");
-    var ctx = editor.getContext("2d");
     var png = editor.toDataURL();
     document.getElementById("newImg").src = png;
+    // 上に持ってくる
+    document.getElementById('main').zindex = 1;
+    document.getElementById('result').zindex = 100;
+}
+
+function showSizeMod() {
+    var size = prompt('enter your screen size (ex: 1920x1080)');
+    var editor = document.getElementById("editor");
+    size = size.split('x');
+    editor.width = size[0];
+    editor.height = size[1];
+}
+
+function goToMain() {
+    document.getElementById('result').zindex = 0;
+    document.getElementById('main').zindex = 100;
+    document.getElementById('newImg').src = '';
 }
 
 function chRatio() {
