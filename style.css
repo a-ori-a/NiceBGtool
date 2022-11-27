@@ -1,0 +1,17 @@
+canvas {
+    width: 70%;
+    background-color: beige;
+}
+
+button {
+    height: 20px;
+}
+
+textarea {
+    height: 20px;
+    resize: none;
+}
+
+div {
+    padding: 0px;
+}

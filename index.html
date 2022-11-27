@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NiceBGtool</title>
+    <script src="script.js"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div>
+        <textarea name="color" id="color" rows="1"></textarea>
+        <button onclick="apply()">click to apply</button>
+        <button onclick="generate()">click to generate your wallpaper</button>
+        <input type="file" id="accent" accept="image/png, image/png">
+        <canvas id="editor" width="1920" height="1080"></canvas>
+    </div>
+    <textarea name="pos" id="pos" rows="1">0,0</textarea>
+    <button onclick="placeImg()"></button>
+    <div><img id="newImg"></div>
+</body>
+</html>
