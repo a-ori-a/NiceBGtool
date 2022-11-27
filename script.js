@@ -34,6 +34,7 @@ function showSizeMod() {
     size = size.split('x');
     editor.width = size[0];
     editor.height = size[1];
+    apply();
 }
 
 function goToMain() {
