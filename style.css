@@ -4,7 +4,12 @@ canvas {
 }
 
 button {
+    color: #fff;
+    background-color: #a3b9cf;
+    width: 80px;
     height: 20px;
+    vertical-align: middle;
+    border-radius: 10px;
 }
 
 textarea {
@@ -14,4 +19,8 @@ textarea {
 
 div {
     padding: 0px;
+}
+
+.slider {
+    width: 300px;
 }
