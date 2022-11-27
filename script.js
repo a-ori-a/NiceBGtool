@@ -1,10 +1,22 @@
+function randomColor() {
+    result = "#"
+    for (var i=0;i<6;i++) {
+        result += Math.floor(Math.random()*16).toString(16);
+    }
+    return result
+}
+
+
+document.getElementById('color').value = randomColor();
+apply();
+
 function apply() {
     var editor = document.getElementById("editor");
     var ctx = editor.getContext("2d");
-    ctx.clearRect(0,0,1920,1080)
-    var color = document.getElementById('color').value
-    ctx.fillStyle = color
-    ctx.fillRect(0,0,1920,1080)
+    ctx.clearRect(0,0,1920,1080);
+    var color = document.getElementById('color').value;
+    ctx.fillStyle = color;
+    ctx.fillRect(0,0,1920,1080);
 }
 
 function generate() {
@@ -28,13 +40,13 @@ function putImg() {
     }
     var editor = document.getElementById("editor");
     var ctx = editor.getContext("2d");
-    var pos = document.getElementById('pos').value.split(',')
-    var ratio = document.getElementById('ratio').value
-    console.log(pos)
-    image = new Image()
+    var pos = document.getElementById('pos').value.split(',');
+    var ratio = document.getElementById('ratio').value;
+    console.log(pos);
+    image = new Image();
     image.onload = function() {
-        resize = {x: image.naturalWidth*ratio, y: image.naturalHeight*ratio}
+        resize = {x: image.naturalWidth*ratio, y: image.naturalHeight*ratio};
         ctx.drawImage(image, pos[0], pos[1], resize.x, resize.y);
     }
-    image.src = URL.createObjectURL(file.files[0])
+    image.src = URL.createObjectURL(file.files[0]);
 }
