@@ -1,7 +1,14 @@
-canvas {
-    width: 70%;
-    background-color: beige;
+body {
+    color: white;
     margin: 0px;
+    padding: 0px;
+    background-color: #bcd4d3;
+}
+
+canvas {
+    width: 90%;
+    background-color: beige;
+    margin: 0 5%;
     padding: 0px;
 }
 
@@ -19,17 +26,70 @@ textarea {
     resize: none;
 }
 
-
-.generate {
-    background-color: #eeeeee;
-    display: inline-block;
-    border-radius: 10px;
-    width: 70%;
-    text-align: center;
+div {
     margin: 0px;
     padding: 0px;
-    color: black;
 }
+
+a {
+    text-decoration: none;
+    color: white;
+}
+
+#header {
+    height: 138px;
+    width: 100%;
+    color: white;
+    text-align: center;
+    background-color: #8b826a;
+    padding: 1px 0;
+    margin-bottom: 10px;
+}
+
+.top-ul {
+    text-align: center;
+    padding: 10px 0;
+    margin: 0 auto;
+}
+
+.top-li {
+    list-style: none;
+    display: inline-block;
+    margin: 0 20px;
+    padding: 5px 20px;
+    background-color: #8b826a;
+}
+
+.top-li:hover {
+    background-color: #ada48c;
+}
+
+#main{
+    margin-left: 10%;
+    width: 80%;
+    background-color: #6a8b83;
+    position: absolute;
+    padding-top: 30px;
+    padding-bottom: 10px;
+    top: 140px;
+    left: 0px;
+    z-index: 3;
+}
+
+#result{
+    background-color: #6a8b83;
+    position: absolute;
+    top: 140px;
+    left: 0px;
+    z-index: 100;
+}
+
+.maincontent{
+    margin-left: 30%;
+    width: 40%;
+    text-align: center;
+}
+
 
 .generate:hover {
     background-color: #aaaaaa;
