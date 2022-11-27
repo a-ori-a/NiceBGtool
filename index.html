@@ -7,19 +7,33 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div>
-        <textarea name="color" id="color" rows="1" onkeyup="putImg()">#</textarea><br>
+    <div id="header">
+        <h1>NiceBGtool</h1>
+        <ul class="top-ul">
+            <li class="top-li" onclick="goToMain()">main editor</li>
+            <li class="top-li" onclick="showSizeMod()">modify size</li>
+            <li class="top-li"><a href="help.html">how to use</a></li>
+            <li class="top-li" onclick="generate()">generate</li>
+        </ul>
+    </div>
+    <div id="main">
+        <textarea class="maincontent" name="color" id="color" rows="1" onkeyup="putImg()">#</textarea><br>
         <!-- <button onclick="apply()">apply color</button><br> -->
         
-        <input type="file" id="file" accept="image/png, image/png" onchange="putImg()"><br>
-        <input type="range" class="slider" id="ratio" min="0.1" max="5" step="0.05" oninput="chRatio()"><span id="viewValue">1</span><br>
+        <input class="maincontent" type="file" id="file" accept="image/png, image/png" onchange="putImg()"><br>
+        <input type="range" class="slider, maincontent" id="ratio" min="0.1" max="5" step="0.05" value="1" oninput="chRatio()"><span id="viewValue">1</span><br>
         
-        <textarea name="pos" id="pos" onkeyup="putImg()">0,0</textarea>
+        <textarea class="maincontent" name="pos" id="pos" onkeyup="putImg()">0,0</textarea><br>
         <!-- <button onclick="putImg()">put image</button> -->
+        <canvas id="editor" width="1920" height="1080"></canvas>
+        
+        <script src="script.js"></script>
+    </div> 
+    <div id="sizeMod">
+        
     </div>
-    <canvas id="editor" width="1920" height="1080"></canvas>
-    <div class="generate" onclick="generate()">generate wallpaper</div>
-    <div><img id="newImg"></div>
-    <script src="script.js"></script>
+    <div id="result">
+        <img id="newImg">
+    </div>
 </body>
 </html>
