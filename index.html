@@ -8,17 +8,17 @@
 </head>
 <body>
     <div>
-        <textarea name="color" id="color" rows="1" onkeyup="putImg()">#</textarea>
-        <button onclick="apply()">apply color</button><br>
+        <textarea name="color" id="color" rows="1" onkeyup="putImg()">#</textarea><br>
+        <!-- <button onclick="apply()">apply color</button><br> -->
         
         <input type="file" id="file" accept="image/png, image/png" onchange="putImg()"><br>
         <input type="range" class="slider" id="ratio" min="0.1" max="5" step="0.05" oninput="chRatio()"><span id="viewValue">1</span><br>
         
         <textarea name="pos" id="pos" onkeyup="putImg()">0,0</textarea>
-        <button onclick="putImg()">put image</button>
+        <!-- <button onclick="putImg()">put image</button> -->
     </div>
-    <canvas id="editor" width="1920" height="1080"></canvas><br>
-    <button onclick="generate()">generate wallpaper</button>
+    <canvas id="editor" width="1920" height="1080"></canvas>
+    <div class="generate" onclick="generate()">generate wallpaper</div>
     <div><img id="newImg"></div>
     <script src="script.js"></script>
 </body>
