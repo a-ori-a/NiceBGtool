@@ -9,14 +9,17 @@
 </head>
 <body>
     <div>
-        <textarea name="color" id="color" rows="1"></textarea>
-        <button onclick="apply()">click to apply</button>
-        <button onclick="generate()">click to generate your wallpaper</button>
-        <input type="file" id="accent" accept="image/png, image/png">
-        <canvas id="editor" width="1920" height="1080"></canvas>
+        <textarea name="color" id="color" rows="1" onkeyup="putImg()">#</textarea>
+        <button onclick="apply()">apply color</button><br>
+        
+        <input type="file" id="file" accept="image/png, image/png" onchange="putImg()"><br>
+        <input type="range" id="ratio" min="0.1" max="2" step="0.05" onchange="chRatio()"><span id="viewValue">1</span><br>
+        
+        <textarea name="pos" id="pos" onkeyup="putImg()">0,0</textarea>
+        <button onclick="putImg()">put image</button>
     </div>
-    <textarea name="pos" id="pos" rows="1">0,0</textarea>
-    <button onclick="placeImg()">click to put your image</button>
+    <canvas id="editor" width="1920" height="1080"></canvas><br>
+    <button onclick="generate()">generate wallpaper</button>
     <div><img id="newImg"></div>
 </body>
 </html>
