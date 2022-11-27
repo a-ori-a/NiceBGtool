@@ -1,6 +1,8 @@
 canvas {
     width: 70%;
     background-color: beige;
+    margin: 0px;
+    padding: 0px;
 }
 
 button {
@@ -17,8 +19,20 @@ textarea {
     resize: none;
 }
 
-div {
+
+.generate {
+    background-color: #eeeeee;
+    display: inline-block;
+    border-radius: 10px;
+    width: 70%;
+    text-align: center;
+    margin: 0px;
     padding: 0px;
+    color: black;
+}
+
+.generate:hover {
+    background-color: #aaaaaa;
 }
 
 .slider {
