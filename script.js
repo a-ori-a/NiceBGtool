@@ -13,19 +13,22 @@ apply();
 function apply() {
     var editor = document.getElementById("editor");
     var ctx = editor.getContext("2d");
-    ctx.clearRect(0,0, editor.width, editor.height);
+    ctx.clearRect(0,0,1920,1080);
     var color = document.getElementById('color').value;
     ctx.fillStyle = color;
-    ctx.fillRect(0,0, editor.width, editor.height);
+    ctx.fillRect(0,0,1920,1080);
 }
 
 function generate() {
     var editor = document.getElementById("editor");
     var png = editor.toDataURL();
-    document.getElementById("newImg").src = png;
+    // var screen = document.getElementById('screen');
+    // screen.innerHTML = "<img id='newImg'></img>"
+    var result = document.getElementById("newImg");
+    result.src = png;
     // 上に持ってくる
-    document.getElementById('main').zindex = 1;
-    document.getElementById('result').zindex = 100;
+    // document.getElementById('main').zindex = 1;
+    // document.getElementById('result').zindex = 100;
 }
 
 function showSizeMod() {
@@ -34,7 +37,7 @@ function showSizeMod() {
     size = size.split('x');
     editor.width = size[0];
     editor.height = size[1];
-    apply();
+    putImg()
 }
 
 function goToMain() {
