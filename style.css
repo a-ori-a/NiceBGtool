@@ -3,11 +3,11 @@ body {
     margin: 0px;
     padding: 0px;
     background-color: #bcd4d3;
-    transform:translate3d(0,0,0);
 }
 
-canvas {
+.screen {
     width: 90%;
+    height: auto;
     background-color: beige;
     margin: 0 5%;
     padding: 0px;
@@ -69,21 +69,11 @@ a {
     margin-left: 10%;
     width: 80%;
     background-color: #6a8b83;
-    position: absolute;
+    /* position: absolute; */
     padding-top: 30px;
     padding-bottom: 10px;
-    top: 140px;
-    left: 0px;
-    z-index: 3;
 }
 
-#result{
-    background-color: #6a8b83;
-    position: absolute;
-    top: 140px;
-    left: 0px;
-    z-index: 100;
-}
 
 .maincontent{
     margin-left: 30%;
